@@ -1,0 +1,20 @@
+.first{
+  color: blueviolet;
+}
+.last{
+  color: red;
+}
+.even{
+  background-color: aqua;
+}
+.odd{
+  background-color: bisque;
+}
+button{
+  font-size: large;
+  padding: 10px;
+}
+input{
+  padding: 10px;
+  font-size: 20px;
+}

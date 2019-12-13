@@ -1,0 +1,41 @@
+<div>
+  <button (click)="evewntHandler($event)" > Click me!</button>
+
+  <br>
+  <br>
+  <button (click)="switch()" > {{titleButton}}</button>
+
+  <br>
+  <p *ngIf="isClicked">
+    TEXT TEXT TEXT
+  </p>
+</div>
+<input type="text" [(ngModel)]="text">
+<br>
+<p style="font-size: 38px">{{text}}</p>
+
+<h3>{{currentTime}}</h3>
+
+<p>{{message}}</p>
+<p>{{students}}</p>
+<h3 *ngFor="let student of students; let index = index;
+let even = even; let odd = odd;
+let first = first; let last  = last"[ngClass]="{first:first, last:last, even:even, odd:odd}" >{{index+1}}. {{student}}</h3>
+<ul>
+  <li *ngFor="let item of students">{{item}}</li>
+
+</ul>
+<ul>
+  <li *ngFor="let item of students let index = index">
+    <div *ngIf="index%2==0; else alternative">
+      {{index}}</div>
+  </li>
+
+</ul>
+<div *ngIf="isOk; else alternative">
+
+  Hello Anguiar
+</div>
+<ng-template #alternative>
+  Goobye Angular
+</ng-template>
